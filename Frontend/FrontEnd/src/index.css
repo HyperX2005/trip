@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* =============================================
+   THEME CSS VARIABLES
+   Default = dark (current look)
+   [data-theme="light"] = travel sky-blue theme
+   ============================================= */
+
+:root {
+  /* Backgrounds */
+  --bg-primary: #071c16;
+  --bg-secondary: #0c2a22;
+  --bg-card: rgba(12, 42, 34, 0.9);
+  --bg-glass: rgba(255, 255, 255, 0.06);
+  --bg-input: rgba(255, 255, 255, 0.05);
+
+  /* Text */
+  --text-primary: #f5f5f5;
+  --text-muted: rgba(255, 255, 255, 0.65);
+  --text-dim: rgba(255, 255, 255, 0.4);
+
+  /* Accent gold */
+  --accent: #d4b26a;
+  --accent-hover: #e2c47e;
+  --accent-dark: #b8923e;
+  --accent-bg: rgba(212, 178, 106, 0.1);
+  --accent-border: rgba(212, 178, 106, 0.2);
+
+  /* Borders */
+  --border: rgba(212, 178, 106, 0.15);
+  --border-strong: rgba(212, 178, 106, 0.35);
+
+  /* Shadows */
+  --shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+
+  /* Map overlay (for dark map styles) */
+  --map-theme: dark;
+}
+
+/* =============================================
+   LIGHT MODE — travel image background
+   ============================================= */
+
+[data-theme="light"] {
+  /* Variable overrides */
+  --bg-primary: rgba(218, 238, 249, 0.55);
+  /* semi-transparent so image shows */
+  --bg-secondary: rgba(197, 227, 244, 0.6);
+  --bg-card: rgba(255, 255, 255, 0.90);
+  --bg-glass: rgba(255, 255, 255, 0.70);
+  --bg-input: rgba(255, 255, 255, 0.92);
+
+  /* Text — deep navy */
+  --text-primary: #0b2a4a;
+  --text-muted: rgba(11, 42, 74, 0.65);
+  --text-dim: rgba(11, 42, 74, 0.4);
+
+  /* Accent */
+  --accent: #c9782a;
+  --accent-hover: #e08c35;
+  --accent-dark: #a05e1e;
+  --accent-bg: rgba(201, 120, 42, 0.12);
+  --accent-border: rgba(201, 120, 42, 0.3);
+
+  /* Borders */
+  --border: rgba(11, 60, 110, 0.15);
+  --border-strong: rgba(11, 60, 110, 0.32);
+
+  /* Shadows */
+  --shadow: 0 12px 36px rgba(11, 42, 74, 0.15);
+
+  --map-theme: light;
+}
+
+/* Apply travel background image fixed to the viewport in light mode */
+[data-theme="light"] body {
+  background-image: url('/light_bg.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Page containers become semi-transparent glass in light mode
+   so the background image shows through beautifully              */
+[data-theme="light"] .results-container,
+[data-theme="light"] .dashboard-container,
+[data-theme="light"] .state-page {
+  background: rgba(218, 238, 249, 0.55) !important;
+  backdrop-filter: blur(2px);
+}

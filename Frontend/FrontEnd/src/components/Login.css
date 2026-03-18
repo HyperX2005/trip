@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.login-container {
+  width: 100vw;
+  height: 100vh;
+
+  /* Background image */
+  background-image: url("/login-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Center content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+
+
+/* Center card effect */
+.form {
+  width: 320px;
+  padding: 30px 25px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(108, 99, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Title */
+.title {
+  font-size: 3rem;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #aaa;
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+}
+
+/* Inputs */
+input {
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #555;
+  color: white;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+input:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.6);
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+button {
+  width: 48%;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Sign up */
+.signup {
+  background: transparent;
+  border: 1px solid #f5b942;
+  color: #f5b942;
+}
+
+.signup:hover {
+  background: #f5b942;
+  color: #000;
+}
+
+/* Sign in */
+.signin {
+  background: #6c63ff;
+  color: white;
+}
+
+.signin:hover {
+  box-shadow: 0 0 12px rgba(108, 99, 255, 0.8);
+}
+
+/* Center everything */
+.login-wrapper {
+  background: rgba(5, 5, 20, 0.65);
+  /* dark glass effect */
+  padding: 40px 35px;
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+/* Quote centered */
+.subtitle {
+  color: #aaa;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Input wrapper */
+.input-box {
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  text-align: center;
+}
+
+.input-box span {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Buttons centered */
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* Forgot password */
+.forgot {
+  margin-top: 15px;
+  color: #ccc;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Create account */
+.create {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.create span {
+  color: #f5b942;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.create span:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* ── Social icon button row ── */
+.social-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0;
+  color: #666;
+  font-size: 0.78rem;
+  letter-spacing: 0.5px;
+}
+
+.social-divider::before,
+.social-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #333;
+}
+
+.social-icons-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.social-icon-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.social-icon-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.social-icon-btn:active {
+  transform: translateY(0);
+}
+
+.social-icon-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+.social-icon-btn.google {
+  background: #fff;
+}
+
+.social-icon-btn.facebook {
+  background: #1877f2;
+}
+
+.social-icon-btn.apple {
+  background: #000;
+}
+
+.social-icon-btn.twitter {
+  background: #000;
+}
+
+
+/* Disabled / loading state */
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.signin:disabled {
+  box-shadow: none;
+}
